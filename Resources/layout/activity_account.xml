@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" 
+    android:background="#E8E8E8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ 
+    <LinearLayout    
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"   
+        android:id="@+id/touchInterceptor"
+        android:background="#E8E8E8">       
+
+        <TextView
+            android:text="RESET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/txtReset"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#4682B4"
+            android:background="@drawable/rec_rounded"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/rec_rounded"
+            android:id="@+id/llAccountMainReset">            
+			<Button
+				android:text="Reset All"				
+				android:id="@+id/btnReset"
+				style="@style/button_style"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"				
+				android:layout_marginTop="4dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+                android:layout_marginBottom="3dp"
+				/>
+            <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:textSize="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/textView23" />
+        </LinearLayout>
+       
+        <TextView
+            android:text="ABOUT US"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:id="@+id/txtAboutUs"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#4682B4"
+            android:background="@drawable/rec_rounded"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:text="PRIVACY POLICY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:id="@+id/txtPrivacyP"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#4682B4"
+            android:background="@drawable/rec_rounded"
+            android:textStyle="bold"/>
+        
+    </LinearLayout>
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="7dp"
+            android:background="#E8E8E8"
+            android:id="@+id/linearLayout5" >
+            <com.google.android.gms.ads.AdView
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/adView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_alignParentBottom="true"
+              android:layout_gravity="center_vertical"
+              ads:adSize="BANNER"
+              ads:adUnitId="ca-app-pub-5647159582339728/8456633386">
+          </com.google.android.gms.ads.AdView>
+        </RelativeLayout>
+</LinearLayout>

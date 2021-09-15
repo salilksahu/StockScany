@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">StockScany</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+	<string name="sub_prompt">Choose a subscription</string>
+	<string name="banner_ad_unit_id"></string>
+	<string-array name="sub_array">
+		<item>10 Days</item>
+		<item>1 Month</item>
+		<item>3 Months</item>
+	</string-array>
+	<string name="welcome">
+		Thank you for installing StockScany.\n\n
+		Here you can find candlestick patterns and price patterns that are mostly widely and effectively used to find the right stock to make profits.\n\n The candlestick patterns are selected on a downward or upward trend that could signal a possible reversal. We also have the most widely used
+		stock selection patterns that use the price, CCI or RSI to filter out stocks beforehand.\n\n There is a watchlist to save your selected stocks. Stocks within the watchlist will show you the patterns it satisfied since you added them.
+		\n\n We would love to hear any suggestions you have, maybe a new pattern or trading strategy you would want us to show in the app.
+		\n\n The scans data following the close of trading is updated in the app after the Nifty data is availaible, which is generally around 6pm.
+		\n\n Please note, we show you the most suitable stocks as per the candlestick/breakout patterns, a decision to invest on them should be taken based on the prevailing market conditions.
+	</string>
+	<string name="about">
+		Here you can find candlestick patterns and price patterns that are mostly widely and effectively used to find the right stocks.\n\n The candlestick patterns are selected on a downward or upward trend that could signal a possible reversal. We also have the most widely used
+		stock selection patterns that use the price, CCI or RSI to filter out stocks beforehand.\n\n There is a watchlist to save your selected stocks. Stocks within the watchlist will show you the patterns it satisfied since you added them.
+		You can add stocks to the watchlist by clicking the + button on the stocks list or by searching them withing the watchlist screen. Clicking the X button would remove them from the watchlist.
+		\n\n We would love to hear any suggestions you have, maybe a new pattern or trading strategy you would want us to show in the app.
+		\n\n The scans data following the close of trading is updated in the app after the Nifty data is availaible, which is generally around 6pm.
+		\n\n Please note, we show you the most suitable stocks as per the candlestick/breakout patterns, a decision to invest on them should be taken based on the prevailing market conditions.
+	</string>
+	<string name="privacy">Last updated [January 5, 2021]\n\n
+		StockScany (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application (the "StockScany"). Please read this Privacy Policy carefully. IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION. \n\n
+		We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last updated” date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
+		You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Application after the date such revised Privacy Policy is posted. \n\n
+		This Privacy Policy does not apply to the third-party online/mobile store from which you install the Application or make payments, including any in-app subscriptions, which may also collect and use data about you. We are not responsible for any of the data collected by any such third party. \n\n
+		COLLECTION OF YOUR INFORMATION \n\n
+		We may collect information about you in a variety of ways. The information we may collect via the Application depends on the content and materials you use, and includes: \n\n
+		Personal Data \n\n
+		Demographic and other personally identifiable information (such as your name and email address) that you voluntarily give to us when choosing to register your account. \n\n
+		Derivative Data \n\n
+		Information our servers automatically collect when you access the Application, such as submitting a feedback is integral to the Application. \n\n
+		Financial Data \n\n
+		Currently the application is free and does not need any subscription. In the near future when we decide to include a subscription model to access the Application, the financial data will relate to the financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you buy a subscription.
+		We would store only very limited, if any, financial information that we collect. Otherwise, all financial information will be stored by our payment processor, and you are encouraged to review their privacy policy and contact them directly for responses to your questions. \n\n
+		Mobile Device Access \n\n
+		We may request access or permission to certain features from your mobile device, including your mobile device’s [list all features that your app can connect to (eg. bluetooth)]. If you wish to change our access or permissions, you may do so in your device’s settings. \n\n
+		Push Notifications \n\n
+		We may request to send you push notifications regarding your account or the Application. If you wish to opt-out from receiving these types of communications, you may turn them off in your device’s settings. \n\n
+		USE OF YOUR INFORMATION \n\n
+		Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Application to: \n\n
+		Create and manage your account. \n
+		Email you regarding your account. \n
+		Save the stocks watchlist data for your specific account. \n
+		Request feedback and contact you about your use of the Application. \n
+		Monitor and analyze usage and trends to improve your experience with the Application. \n
+		Resolve disputes and troubleshoot problems. \n
+		Respond to product and customer service requests. \n
+		Offer new products, services, mobile applications, or recommendations to you. \n\n
+		DISCLOSURE OF YOUR INFORMATION \n\n
+		We may share information we have collected about you in certain situations. Your information may be disclosed as follows: \n\n
+		By Law or to Protect Rights \n\n
+		If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.
+		This includes exchanging information with other entities for fraud protection and credit risk reduction. \n\n
+		Third-Party Service Providers \n\n
+		We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance. \n\n
+		Marketing Communications \n\n
+		With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes, as permitted by law. \n\n
+		Third-Party Advertisers \n\n
+		We may use third-party advertising companies to serve ads when you visit the Application. These companies may use information about your visits to the Application and other websites that are contained in web cookies in order to provide advertisements about goods and services of interest to you. \n\n
+		Other Third Parties \n\n
+		We may share your information with advertisers and investors for the purpose of conducting general business analysis. We may also share your information with such third parties for marketing purposes, as permitted by law.  \n\n
+		Sale or Bankruptcy \n\n
+		If we reorganize or sell all or a portion of our assets, undergo a merger, or are acquired by another entity, we may transfer your information to the successor entity. If we go out of business or enter bankruptcy, your information would be an asset transferred or acquired by a third party.
+		You acknowledge that such transfers may occur and that the transferee may decline honor commitments we made in this Privacy Policy.  \n\n
+		We are not responsible for the actions of third parties with whom you share personal or sensitive data, and we have no authority to manage or control third-party solicitations. If you no longer wish to receive correspondence, emails or other communications from third parties, you are responsible for contacting the third party directly.  \n\n
+		Internet-Based Advertising \n\n
+		Additionally, we may use third-party software to serve ads on the Application, implement email marketing campaigns, and manage other interactive marketing initiatives. This third-party software may use cookies or similar tracking technology to help manage and optimize your online experience with us.
+		For more information about opting-out of interest-based ads, visit the Network Advertising Initiative Opt-Out Tool or Digital Advertising Alliance Opt-Out Tool. \n\n
+		SECURITY OF YOUR INFORMATION \n\n
+		We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
+		Any information disclosed online is vulnerable to interception and misuse by unauthorized parties. Therefore, we cannot guarantee complete security if you provide personal information. \n\n
+		POLICY FOR CHILDREN \n\n
+		We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below. \n\n
+		OPTIONS REGARDING YOUR INFORMATION \n\n
+		Account Information \n\n
+		You may at any time review or change the information in your account or terminate your account by: \n\n
+		Logging into your account settings and updating your account \n
+		Contacting us using the contact information provided below \n
+		Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However, some information may be retained in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our Terms of Use and/or comply with legal requirements. \n\n
+		Emails and Communications \n\n
+		If you no longer wish to receive correspondence, emails, or other communications from us, you may opt-out by: \n\n
+		Contacting us using the contact information provided below \n
+		If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly. \n\n\n
+		CONTACT US \n\n
+		If you have questions or comments about this Privacy Policy, please contact us at: \n\n
+		numskatech@gmail.com
+	</string>
+</resources>

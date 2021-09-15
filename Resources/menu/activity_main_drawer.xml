@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_basic"
+            android:icon="@drawable/basic"
+            android:title="Candlestick Patterns" />
+        <item
+            android:id="@+id/nav_adv"
+            android:icon="@drawable/advanced"
+            android:title="Breakout Patterns" />
+        <item
+            android:id="@+id/nav_complex"
+            android:icon="@drawable/watch"
+            android:title="Watchlist" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/acc"
+            android:title="Account" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/feedback"
+                android:title="Feedback" />
+        </menu>
+    </item>
+
+</menu>

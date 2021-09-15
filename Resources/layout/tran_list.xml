@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:p4="http://xamarin.com/mono/android/designer"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/layoutTItem"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">   
+        <TableLayout
+            android:layout_marginTop="2dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:shrinkColumns="*"
+            android:id="@+id/tableLayout3">            
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_height="wrap_content"                
+                android:layout_width="match_parent">
+                <TextView
+                    android:text="Date"
+                    android:layout_height="wrap_content"                
+                    android:layout_width="0px"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:textSize="14dp"
+                    android:paddingLeft="2dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:id="@+id/txtDate" />
+                <TextView
+                    android:text="Order Id              "
+                    android:layout_height="wrap_content"                
+                    android:layout_width="0px"
+                    android:layout_weight="8"
+                    android:textSize="14dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingLeft="3dp"
+                    android:id="@+id/txtOrderId" />                
+                <TextView
+                    android:text="Amount"
+                    android:layout_height="wrap_content"                
+                    android:layout_width="0px"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:paddingLeft="2dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:id="@+id/txtAmount" />
+                <TextView
+                    android:text="Status      "
+                    android:layout_height="wrap_content"                
+                    android:layout_width="0px"
+                    android:layout_weight="4"
+                    android:textSize="14dp"
+                    android:paddingLeft="3dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:id="@+id/txtStatus" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>   

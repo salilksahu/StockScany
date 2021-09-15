@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>MPAndroidChart</id>
+        <version>3.0.1</version>
+        <title>MPAndroidChart</title>
+        <authors>Flash3001</authors>
+        <owners>Philipp Jahoda</owners>
+        <licenseUrl>https://raw.githubusercontent.com/Flash3001/MPAndroidChart.Xamarin/master/LICENSE.MD</licenseUrl>
+        <projectUrl>https://github.com/Flash3001/MPAndroidChart.Xamarin</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A Xamarin port for MPAndroidChart by Philipp Jahoda</description>
+        <releaseNotes>https://github.com/PhilJay/MPAndroidChart/releases/tag/v3.0.0</releaseNotes>
+        <copyright>Copyright 2016</copyright>
+        <tags>chart mpandroidchart LineChart Combined-Chart BarChart Horizontal-BarChartPieChart ScatterChart CandleStickChart BubbleChart RadarChart</tags>
+    </metadata>
+</package>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >    
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:text="You need to have a registered account to submit feedback."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:textColor="#F51E14"
+        android:id="@+id/txtErrMsg" />
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:text="Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:id="@+id/textView4" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_height="25dp"
+        android:layout_width="match_parent"
+        android:textSize="16dp"
+        android:layout_marginTop="5dp"
+        android:background="#E8E8E8"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/etName" />
+    <TextView
+        android:text="Email ID"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textSize="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/textView5" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textSize="16dp"
+        android:background="#E8E8E8"        
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/etEmail" />
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Complaint"
+            android:textColor="#909499"
+            android:id="@+id/rbComplaint" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggestion"
+            android:textColor="#909499"
+            android:id="@+id/rbSuggestion" />
+    </RadioGroup>
+    <EditText
+        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:textSize="16dp"
+        android:inputType="textMultiLine"
+        android:background="#E8E8E8"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:maxLength="800"
+        android:gravity="top|left"
+        android:scrollbars="vertical"
+        android:hint="Enter your complaint or suggestion here.."        
+        android:id="@+id/etFeedback" />
+    <Button
+		android:text="Submit"				
+		android:id="@+id/btnSubmit"
+		style="@style/button_style"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"				
+		android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"				
+		/>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="3dp"
+        android:id="@+id/linearLayout51" >
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5647159582339728/4028970655">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>    
+</LinearLayout>

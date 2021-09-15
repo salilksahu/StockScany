@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#E8E8E8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@drawable/rec_rounded"
+        android:id="@+id/linearLayout6" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtScanName"
+            android:text="Bullish Engulf"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            style="@style/scan_list" />
+        <TextView
+            android:text="Current day bullish candle completely engulfs the previous day bear candle, on a downward price trend."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"
+            android:id="@+id/txtScanDesc"
+            android:fontFamily="sans-serif-condensed"/>
+    </LinearLayout>
+    
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/lvScanStocks"
+        />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:id="@+id/linearLayout5" >
+        <com.google.android.gms.ads.AdView
+          xmlns:ads="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/adView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_alignParentBottom="true"
+          android:layout_gravity="center_vertical"
+          ads:adSize="BANNER"
+          ads:adUnitId="ca-app-pub-5647159582339728/7269872358">
+      </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+</LinearLayout>

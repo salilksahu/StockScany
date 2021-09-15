@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoggedUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dUpdateDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoggedUpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGeneralInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeneralInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeneralInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelcomeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelcomeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWelcomeInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllScans">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSubActive" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllScansResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllScansResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScanStocksData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSecId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScanStocksDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScanStocksDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWLDelta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSecIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDBStateIds" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWLDeltaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWLDeltaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSecurities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSecurityState" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSecuritiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSecuritiesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckEmailResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePhone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPhone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePhoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePhoneResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNewOld" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegisterClientResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertTran">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtTransDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRefId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fAmount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertTranResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertTranResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMailInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSetWL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iFlag" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSecIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sStateIds" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSetWLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSetWLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitFeedback">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFeedback" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitFeedbackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubmitFeedbackResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShareLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUniqueId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAccountId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShareLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShareLinkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="symbol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="series" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="open" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="close" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="last" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="prev_close" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tottrdqty" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tottrdval" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="s_timestamp" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="totaltrades" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNSEResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RunCalcs">
+        <s:complexType />
+      </s:element>
+      <s:element name="RunCalcsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RunAllScans">
+        <s:complexType />
+      </s:element>
+      <s:element name="RunAllScansResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckNSEData">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckNSEDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNSEDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indice" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="change" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="per_change" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="flag" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizeDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSetScanInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="scanid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="symbol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="series" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="flag" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSetScanInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSetScanInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAllData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAllDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmailId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPasscode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendOTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendOTPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoggedUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:LoggedUpdate" />
+  </wsdl:message>
+  <wsdl:message name="LoggedUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:LoggedUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeneralInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeneralInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWelcomeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWelcomeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetWelcomeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWelcomeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllScansSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllScans" />
+  </wsdl:message>
+  <wsdl:message name="GetAllScansSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllScansResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScanStocksDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScanStocksData" />
+  </wsdl:message>
+  <wsdl:message name="GetScanStocksDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScanStocksDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWLDeltaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWLDelta" />
+  </wsdl:message>
+  <wsdl:message name="GetWLDeltaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWLDeltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSecuritiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSecurities" />
+  </wsdl:message>
+  <wsdl:message name="GetSecuritiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSecuritiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckEmail" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePhoneSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePhone" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePhoneSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterClientSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterClient" />
+  </wsdl:message>
+  <wsdl:message name="RegisterClientSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertTranSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertTran" />
+  </wsdl:message>
+  <wsdl:message name="InsertTranSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMailInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMailInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMailInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMailInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSetWLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSetWL" />
+  </wsdl:message>
+  <wsdl:message name="GetSetWLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSetWLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitFeedbackSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitFeedback" />
+  </wsdl:message>
+  <wsdl:message name="SubmitFeedbackSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShareLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShareLink" />
+  </wsdl:message>
+  <wsdl:message name="GetShareLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShareLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertNSESoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNSE" />
+  </wsdl:message>
+  <wsdl:message name="InsertNSESoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNSEResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunCalcsSoapIn">
+    <wsdl:part name="parameters" element="tns:RunCalcs" />
+  </wsdl:message>
+  <wsdl:message name="RunCalcsSoapOut">
+    <wsdl:part name="parameters" element="tns:RunCalcsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunAllScansSoapIn">
+    <wsdl:part name="parameters" element="tns:RunAllScans" />
+  </wsdl:message>
+  <wsdl:message name="RunAllScansSoapOut">
+    <wsdl:part name="parameters" element="tns:RunAllScansResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckNSEDataSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckNSEData" />
+  </wsdl:message>
+  <wsdl:message name="CheckNSEDataSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckNSEDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:FinalizeData" />
+  </wsdl:message>
+  <wsdl:message name="FinalizeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:FinalizeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSetScanInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSetScanInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSetScanInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSetScanInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAllDataSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAllData" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAllDataSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAllDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendOTP" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendOTPResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SSWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoggedUpdate">
+      <wsdl:input message="tns:LoggedUpdateSoapIn" />
+      <wsdl:output message="tns:LoggedUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralInfo">
+      <wsdl:input message="tns:GetGeneralInfoSoapIn" />
+      <wsdl:output message="tns:GetGeneralInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWelcomeInfo">
+      <wsdl:input message="tns:GetWelcomeInfoSoapIn" />
+      <wsdl:output message="tns:GetWelcomeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllScans">
+      <wsdl:input message="tns:GetAllScansSoapIn" />
+      <wsdl:output message="tns:GetAllScansSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScanStocksData">
+      <wsdl:input message="tns:GetScanStocksDataSoapIn" />
+      <wsdl:output message="tns:GetScanStocksDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWLDelta">
+      <wsdl:input message="tns:GetWLDeltaSoapIn" />
+      <wsdl:output message="tns:GetWLDeltaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurities">
+      <wsdl:input message="tns:GetSecuritiesSoapIn" />
+      <wsdl:output message="tns:GetSecuritiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <wsdl:input message="tns:CheckEmailSoapIn" />
+      <wsdl:output message="tns:CheckEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhone">
+      <wsdl:input message="tns:UpdatePhoneSoapIn" />
+      <wsdl:output message="tns:UpdatePhoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterClient">
+      <wsdl:input message="tns:RegisterClientSoapIn" />
+      <wsdl:output message="tns:RegisterClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTran">
+      <wsdl:input message="tns:InsertTranSoapIn" />
+      <wsdl:output message="tns:InsertTranSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo">
+      <wsdl:input message="tns:GetPaymentInfoSoapIn" />
+      <wsdl:output message="tns:GetPaymentInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailInfo">
+      <wsdl:input message="tns:GetMailInfoSoapIn" />
+      <wsdl:output message="tns:GetMailInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdl:input message="tns:GetTransactionsSoapIn" />
+      <wsdl:output message="tns:GetTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSetWL">
+      <wsdl:input message="tns:GetSetWLSoapIn" />
+      <wsdl:output message="tns:GetSetWLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitFeedback">
+      <wsdl:input message="tns:SubmitFeedbackSoapIn" />
+      <wsdl:output message="tns:SubmitFeedbackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShareLink">
+      <wsdl:input message="tns:GetShareLinkSoapIn" />
+      <wsdl:output message="tns:GetShareLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNSE">
+      <wsdl:input message="tns:InsertNSESoapIn" />
+      <wsdl:output message="tns:InsertNSESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunCalcs">
+      <wsdl:input message="tns:RunCalcsSoapIn" />
+      <wsdl:output message="tns:RunCalcsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunAllScans">
+      <wsdl:input message="tns:RunAllScansSoapIn" />
+      <wsdl:output message="tns:RunAllScansSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckNSEData">
+      <wsdl:input message="tns:CheckNSEDataSoapIn" />
+      <wsdl:output message="tns:CheckNSEDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeData">
+      <wsdl:input message="tns:FinalizeDataSoapIn" />
+      <wsdl:output message="tns:FinalizeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSetScanInfo">
+      <wsdl:input message="tns:GetSetScanInfoSoapIn" />
+      <wsdl:output message="tns:GetSetScanInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllData">
+      <wsdl:input message="tns:DeleteAllDataSoapIn" />
+      <wsdl:output message="tns:DeleteAllDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <wsdl:input message="tns:SendOTPSoapIn" />
+      <wsdl:output message="tns:SendOTPSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SSWebServiceSoap" type="tns:SSWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoggedUpdate">
+      <soap:operation soapAction="http://tempuri.org/LoggedUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralInfo">
+      <soap:operation soapAction="http://tempuri.org/GetGeneralInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelcomeInfo">
+      <soap:operation soapAction="http://tempuri.org/GetWelcomeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllScans">
+      <soap:operation soapAction="http://tempuri.org/GetAllScans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScanStocksData">
+      <soap:operation soapAction="http://tempuri.org/GetScanStocksData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWLDelta">
+      <soap:operation soapAction="http://tempuri.org/GetWLDelta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurities">
+      <soap:operation soapAction="http://tempuri.org/GetSecurities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <soap:operation soapAction="http://tempuri.org/CheckEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhone">
+      <soap:operation soapAction="http://tempuri.org/UpdatePhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterClient">
+      <soap:operation soapAction="http://tempuri.org/RegisterClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTran">
+      <soap:operation soapAction="http://tempuri.org/InsertTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPaymentInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailInfo">
+      <soap:operation soapAction="http://tempuri.org/GetMailInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap:operation soapAction="http://tempuri.org/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSetWL">
+      <soap:operation soapAction="http://tempuri.org/GetSetWL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitFeedback">
+      <soap:operation soapAction="http://tempuri.org/SubmitFeedback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShareLink">
+      <soap:operation soapAction="http://tempuri.org/GetShareLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNSE">
+      <soap:operation soapAction="http://tempuri.org/InsertNSE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunCalcs">
+      <soap:operation soapAction="http://tempuri.org/RunCalcs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunAllScans">
+      <soap:operation soapAction="http://tempuri.org/RunAllScans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckNSEData">
+      <soap:operation soapAction="http://tempuri.org/CheckNSEData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeData">
+      <soap:operation soapAction="http://tempuri.org/FinalizeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSetScanInfo">
+      <soap:operation soapAction="http://tempuri.org/GetSetScanInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllData">
+      <soap:operation soapAction="http://tempuri.org/DeleteAllData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <soap:operation soapAction="http://tempuri.org/SendOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SSWebServiceSoap12" type="tns:SSWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoggedUpdate">
+      <soap12:operation soapAction="http://tempuri.org/LoggedUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetGeneralInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelcomeInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetWelcomeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllScans">
+      <soap12:operation soapAction="http://tempuri.org/GetAllScans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScanStocksData">
+      <soap12:operation soapAction="http://tempuri.org/GetScanStocksData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWLDelta">
+      <soap12:operation soapAction="http://tempuri.org/GetWLDelta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurities">
+      <soap12:operation soapAction="http://tempuri.org/GetSecurities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmail">
+      <soap12:operation soapAction="http://tempuri.org/CheckEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhone">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterClient">
+      <soap12:operation soapAction="http://tempuri.org/RegisterClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTran">
+      <soap12:operation soapAction="http://tempuri.org/InsertTran" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPaymentInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetMailInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSetWL">
+      <soap12:operation soapAction="http://tempuri.org/GetSetWL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitFeedback">
+      <soap12:operation soapAction="http://tempuri.org/SubmitFeedback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShareLink">
+      <soap12:operation soapAction="http://tempuri.org/GetShareLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNSE">
+      <soap12:operation soapAction="http://tempuri.org/InsertNSE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunCalcs">
+      <soap12:operation soapAction="http://tempuri.org/RunCalcs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunAllScans">
+      <soap12:operation soapAction="http://tempuri.org/RunAllScans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckNSEData">
+      <soap12:operation soapAction="http://tempuri.org/CheckNSEData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeData">
+      <soap12:operation soapAction="http://tempuri.org/FinalizeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSetScanInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetSetScanInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllData">
+      <soap12:operation soapAction="http://tempuri.org/DeleteAllData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <soap12:operation soapAction="http://tempuri.org/SendOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SSWebService">
+    <wsdl:port name="SSWebServiceSoap" binding="tns:SSWebServiceSoap">
+      <soap:address location="http://stockscanyweb.azurewebsites.net/SSWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SSWebServiceSoap12" binding="tns:SSWebServiceSoap12">
+      <soap12:address location="http://stockscanyweb.azurewebsites.net/SSWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
