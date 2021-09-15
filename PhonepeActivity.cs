@@ -32,7 +32,7 @@ namespace StockScany
                 using (var uri = new Android.Net.Uri.Builder()
                     .Scheme("upi")
                     .Authority("pay")
-                    .AppendQueryParameter("pa", "8763817158@ybl")
+                    .AppendQueryParameter("pa", "cc@ybl")
                     .AppendQueryParameter("pn", "StockScany")
                     .AppendQueryParameter("tn", "Pay for pro")
                     .AppendQueryParameter("tr", transaction_ref_id)
